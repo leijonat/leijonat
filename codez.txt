@@ -1,0 +1,7 @@
+Osoite File explorerilla on muotoa:
+
+\\codez.savonia.fi\codez_wwwroot\projekti1\2017_syksy\vk
+
+Selaimella käytettäessä selaimen osoitteeksi kirjoitetaan vastaavasti muotoa:
+
+codez.savonia.fi/projekti1/2017_syksy/vk/index.html
