@@ -94,6 +94,12 @@
     /* tähän vielä text-shadow poisto (oletuksena carousel captionissa) */
 }
 
+/* Kortin tekstipuolen taustakuva harmaasävyiseksi */
+.back-img
+{
+	filter: grayscale(80%);
+}
+
 .back-title
 {
     color: rgb(0, 0, 0);
@@ -121,5 +127,5 @@
     padding-bottom: 10px;
     text-align: center;
     background-color: rgb(200, 200, 200);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
 }
