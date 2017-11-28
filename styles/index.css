@@ -113,6 +113,7 @@
     color: rgb(0, 0, 0);
     font-size: 18px;
     padding: 0px 3px 0px 3px;
+	text-align: left;
     /* tähän vielä text-shadow poisto (oletuksena carousel captionissa) */
 }
 
