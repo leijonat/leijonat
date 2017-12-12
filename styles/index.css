@@ -3,16 +3,22 @@
 /* PATH: "../kansio/tiedosto.txt*/
 
 /* Kansi, sivun yläosassa  */
-
-.cover
-{
-    height:500px;
-}
-
-/* Kannen otsikko */
-.covertitle
-{
-    font-size: 42px;
+body{
+    /* The image used 
+    background-image: url(/images/taustakuva/taustakuva-vaalea.jpg); */
+background-image: url(../images/Taustakuva/taustakuva-vaalea.jpg);
+    /* Full height 
+    height: 100%; */
+height: 100%;
+    /* Center and scale the image nicely 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 /* Kortin perspektiivi */
@@ -32,7 +38,7 @@
 .flip-container, .front, .back
 {
     width: 100%;
-    
+    margin-bottom: 20px;
 }
 
 /* Kortin kääntämisen nopeus ja kääntämis-perspektiivi */
@@ -46,35 +52,37 @@
 /* piilottaa kortin toisen puolen kääntäessä */
 .front
 {
+    z-index: 2;
+    transform: rotateY(0deg);
+    
     backface-visibility: hidden;
     position: relative;
     top: 0;
     left: 0;
-    border: 10px solid black;
+    border: 15px solid black;
+    border-image-slice: 120 120 120 120 fill;
+    border-image-width: 15px 15px 15px 15px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: round round;
+    border-image-source: url(../images/border.png);
+    background-color: black;
 }
 
-.back
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 10px solid black;
-}
-
-/* kortin etupuoli */
-.front
-{
-    z-index: 2;
-    /* for firefox 31 */
-    transform: rotateY(0deg);
-    background-color: aqua;
-}
-
-/* taustapuoli joka on aluksi piilossa */
 .back
 {
     transform: rotateY(180deg);
-    background-color: blue;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 15px solid black;
+    border-image-slice: 120 120 120 120 fill;
+    border-image-width: 15px 15px 15px 15px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: round round;
+    border-image-source: url(../images/border.png);
+    background-color: black;
+    max-height: 600px;
 }
 
 .carousel-position
@@ -103,18 +111,15 @@
 .back-title
 {
     color: rgb(0, 0, 0);
-    font-size: 36px;
+    font-size: 24px;
     padding: 0px 3px 0px 3px;
-    /* tähän vielä text-shadow poisto (oletuksena carousel captionissa) */
 }
 
 .back-content
 {
     color: rgb(0, 0, 0);
-    font-size: 18px;
-    padding: 0px 3px 0px 3px;
+    font-size: 14px;
 	text-align: left;
-    /* tähän vielä text-shadow poisto (oletuksena carousel captionissa) */
 }
 
 .back-text-container
@@ -124,9 +129,31 @@
     left: 5px;
     bottom: 10px;
     z-index: 10;
-    padding-top: 10px;
-    padding-bottom: 10px;
     text-align: center;
+    padding: 5px;
     background-color: rgb(200, 200, 200);
     background-color: rgba(255, 255, 255, 0.7);
 }
+
+.leijona-link
+{
+    background: lightskyblue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, lightskyblue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, lightskyblue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, lightskyblue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, lightskyblue); /* Standard syntax */
+    color: black;
+    text-decoration: none;
+}
+.fontti1940{
+    font-family: 'Lobster', cursive; 
+    font-size: 80px;
+    color: white;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;  
+}
+
+
